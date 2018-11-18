@@ -26,9 +26,8 @@ import java.awt.image.ImageObserver;
 import java.io.ByteArrayInputStream;
 import java.nio.ByteBuffer;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-
-import ch.randelshofer.media.jpeg.JPEGImageIO;
 
 import com.sun.pdfview.PDFObject;
 import com.sun.pdfview.PDFParseException;
@@ -89,7 +88,7 @@ public class DCTDecode {
 		BufferedImage bimg;
 		try {
 			try {
-				bimg = JPEGImageIO.read(new ByteArrayInputStream(input), false);				
+				bimg = ImageIO.read(new ByteArrayInputStream(input));
 			} catch (IllegalArgumentException colorProfileMismatch) {
 				// we experienced this problem with an embedded jpeg
 				// that specified a icc color profile with 4 components 

@@ -5,7 +5,7 @@
 	<artifactId>pdf-renderer</artifactId>
 	<packaging>jar</packaging>
 	<name>PDF Renderer</name>
-	<version>1.0.5.1</version>
+	<version>1.0.5.2</version>
     <url>http://www.swinglabs.org/</url>
     <licenses>
         <license>
